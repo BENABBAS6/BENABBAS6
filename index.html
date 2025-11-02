@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amine Benabbas | Web & Mobile Developer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Personal portfolio website for Amine Benabbas, a recent graduate in Web and Mobile Development based in Mohammedia, Morocco.">
+    <meta name="keywords" content="Amine Benabbas, Web Developer, Mobile Developer, Full-Stack Developer, Portfolio, Mohammedia, ENSET, JavaScript, Node.js, React, PHP">
+    <meta name="author" content="Amine Benabbas">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (Animate on Scroll) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Google Fonts - Inter -->
+     <link rel="icon" type="image/png" href="pic 2025-09-22 à 18.25.09_8038706d.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+<body>
+
+    <!-- ======== Header + Navbar ======== -->
+    <header class="glass-nav sticky top-0 z-50 w-full">
+        <nav class="container mx-auto max-w-7xl px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="font-bold text-2xl">
+                <span class="gradient-text">Amine Benabbas</span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#about" class="hover:text-sky-400 transition-colors">About</a>
+                <a href="#skills" class="hover:text-sky-400 transition-colors">Skills</a>
+                <a href="#experience" class="hover:text-sky-400 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-sky-400 transition-colors">Contact</a>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-sky-500/10 transition-colors">
+                    <i data-lucide="sun" class="hidden dark:block"></i>
+                    <i data-lucide="moon" class="block dark:hidden"></i>
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-full hover:bg-sky-500/10 transition-colors">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden flex-col items-center space-y-4 py-4 border-t border-slate-700/50">
+            <a href="#about" class="hover:text-sky-400 transition-colors">About</a>
+            <a href="#skills" class="hover:text-sky-400 transition-colors">Skills</a>
+            <a href="#experience" class="hover:text-sky-400 transition-colors">Experience</a>
+            <a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a>
+            <a href="#contact" class="hover:text-sky-400 transition-colors">Contact</a>
+        </div>
+    </header>
+
+    <!-- ======== Main Content ======== -->
+    <main class="container mx-auto max-w-7xl px-6">
+
+        <!-- ======== 1. Home / Hero Section ======== -->
+        <section id="home" class="min-h-[calc(100vh-80px)] flex flex-col-reverse lg:flex-row items-center justify-between py-20 lg:py-0">
+            <!-- Hero Text -->
+            <div classs="lg:w-1/2" data-aos="fade-right">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+                    <span class="gradient-text">Amine Benabbas</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 dark:text-slate-300 text-slate-700">
+                    Web & Mobile Developer
+                </h2>
+                <p class="text-lg mb-8 max-w-xl dark:text-slate-400 text-slate-600">
+                    A recent graduate in Web and Mobile Development, passionate about programming and new technologies. I'm eager to apply my technical skills to contribute to innovative projects.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#contact" class="btn-primary">Get in Touch</a>
+                    <a href="#projects" class="btn-secondary">View My Work</a>
+                </div>
+            </div>
+            
+            <!-- Hero Image -->
+            <div class="lg:w-1/2 flex justify-center lg:justify-end mb-10 lg:mb-0" data-aos="fade-left">
+                <div class="relative w-80 h-80 md:w-96 md:h-96">
+                    <!-- Gradient background blob -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-sky-500 to-cyan-400 rounded-full blur-2xl opacity-50"></div>
+                    <!-- The image -->
+                    <img src="pic 2025-09-22 à 18.25.09_8038706d.jpg" 
+                         alt="Amine Benabbas giving a presentation"
+                         class="relative w-full h-full object-cover rounded-full shadow-2xl"
+                         onerror="this.src='https://placehold.co/400x400/1e293b/94a3b8?text=Amine+Benabbas'; this.onerror=null;">
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== 2. About Me Section ======== -->
+        <section id="about" class="py-20">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">A little bit about my background and interests</p>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- About Text -->
+                <div data-aos="fade-right" data-aos-delay="200">
+                    <h3 class="text-2xl font-semibold mb-4">Who I Am</h3>
+                    <p class="dark:text-slate-400 text-slate-600 mb-4">
+                        I'm a recent Web & Mobile Development graduate from ENSET Mohammedia, with a strong foundation in building and managing modern web applications. My passion lies in turning complex problems into elegant, efficient solutions.
+                    </p>
+                    <p class="dark:text-slate-400 text-slate-600 mb-6">
+                        Outside of coding, I'm a dedicated volleyball player (competing in the 2nd national division!), a music enthusiast, and an avid gamer. These interests have taught me the value of teamwork, creativity, and persistent problem-solving.
+                    </p>
+                    <a href="BENABBAS AMINE.pdf" download="CV-Amine-Benabbas.pdf" class="btn-secondary">
+                        <i data-lucide="download" class="inline-block mr-2 w-5 h-5"></i>
+                        Download CV
+                    </a>
+                </div>
+                
+                <!-- Skills & Info Cards -->
+                <div class="grid grid-cols-2 gap-4" data-aos="fade-left" data-aos-delay="200">
+                    <div class="glass-card p-6 rounded-xl">
+                        <i data-lucide="award" class="w-10 h-10 mb-3 text-sky-400"></i>
+                        <h4 class="text-lg font-semibold mb-1">Soft Skills</h4>
+                        <ul class="list-disc list-inside dark:text-slate-400 text-slate-600">
+                            <li>Responsible</li>
+                            <li>Creative</li>
+                            <li>Sociable</li>
+                        </ul>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl">
+                        <i data-lucide="languages" class="w-10 h-10 mb-3 text-sky-400"></i>
+                        <h4 class="text-lg font-semibold mb-1">Languages</h4>
+                        <ul class="list-disc list-inside dark:text-slate-400 text-slate-600">
+                            <li>Arabic (Native)</li>
+                            <li>English (C2)</li>
+                            <li>French (B2)</li>
+                            <li>Spanish (Basic)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== 3. Skills Section ======== -->
+        <section id="skills" class="py-20">
+            <h2 class="section-title" data-aos="fade-up">Technical Skills</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">The technologies I work with</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <!-- Skill Card -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center" data-aos="fade-up" data-aos-delay="150">
+                    <i data-lucide="code" class="w-12 h-12 mb-3 text-sky-400"></i>
+                    <h4 class="text-lg font-semibold">HTML5</h4>
+                </div>
+                <!-- Skill Card -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center" data-aos="fade-up" data-aos-delay="200">
+                    <i data-lucide="file-braces-corner" class="w-12 h-12 mb-3 text-sky-400"></i>
+                    <h4 class="text-lg font-semibold">CSS3</h4>
+                </div>
+                <!-- Skill Card -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center" data-aos="fade-up" data-aos-delay="250">
+                    <i data-lucide="braces" class="w-12 h-12 mb-3 text-sky-400"></i>
+                    <h4 class="text-lg font-semibold">JavaScript</h4>
+                </div>
+                <!-- Skill Card -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center" data-aos="fade-up" data-aos-delay="300">
+                    <i data-lucide="notebook-tabs" class="w-12 h-12 mb-3 text-sky-400"></i>
+                    <h4 class="text-lg font-semibold">PHP</h4>
+                </div>
+                <!-- Skill Card -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center" data-aos="fade-up" data-aos-delay="350">
+                    <i data-lucide="database" class="w-12 h-12 mb-3 text-sky-400"></i>
+                    <h4 class="text-lg font-semibold">MySQL</h4>
+                </div>
+                <!-- Skill Card -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center" data-aos="fade-up" data-aos-delay="400">
+                    <i data-lucide="code-2" class="w-12 h-12 mb-3 text-sky-400"></i>
+                    <h4 class="text-lg font-semibold">Java</h4>
+                </div>
+                <!-- Skill Card -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center" data-aos="fade-up" data-aos-delay="450">
+                    <i data-lucide="box" class="w-12 h-12 mb-3 text-sky-400"></i>
+                    <h4 class="text-lg font-semibold">Node.js</h4>
+                </div>
+                <!-- Skill Card -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center" data-aos="fade-up" data-aos-delay="500">
+                    <i data-lucide="server" class="w-12 h-12 mb-3 text-sky-400"></i>
+                    <h4 class="text-lg font-semibold">Apache</h4>
+                </div>
+                <!-- Skill Card -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center" data-aos="fade-up" data-aos-delay="550">
+                    <i data-lucide="file-json" class="w-12 h-12 mb-3 text-sky-400"></i>
+                    <h4 class="text-lg font-semibold">UML</h4>
+                </div>
+                <!-- Skill Card -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center" data-aos="fade-up" data-aos-delay="600">
+                    <i data-lucide="smartphone" class="w-12 h-12 mb-3 text-sky-400"></i>
+                    <h4 class="text-lg font-semibold">Mobile Dev</h4>
+                </div>
+                <!-- Skill Card -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center" data-aos="fade-up" data-aos-delay="650">
+                    <i data-lucide="search-check" class="w-12 h-12 mb-3 text-sky-400"></i>
+                    <h4 class="text-lg font-semibold">SEO</h4>
+                </div>
+                <!-- Skill Card -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center" data-aos="fade-up" data-aos-delay="700">
+                    <i data-lucide="layout-grid" class="w-12 h-12 mb-3 text-sky-400"></i>
+                    <h4 class="text-lg font-semibold">CMS</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== 4. Experience Section ======== -->
+        <section id="experience" class="py-20">
+            <h2 class="section-title" data-aos="fade-up">Work Experience</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">My professional journey so far</p>
+            
+            <div class="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                <!-- Timeline -->
+                <div class="relative">
+                    <!-- Timeline Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+                        <div class="ml-4">
+                            <span class="text-sm font-semibold text-sky-400">Jul 2025 - Sep 2025</span>
+                            <h4 class="text-xl font-semibold my-1">Web Developer</h4>
+                            <h5 class="font-medium mb-2 dark:text-slate-300 text-slate-700">DEARS Internship - Casablanca</h5>
+                            <p class="dark:text-slate-400 text-slate-600">Developed a full-stack e-commerce website for automation, robotics, and mechanics products.</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+                        <div class="ml-4">
+                            <span class="text-sm font-semibold text-sky-400">Apr 2025 - Jun 2025</span>
+                            <h4 class="text-xl font-semibold my-1">Full-Stack Developer (PFE)</h4>
+                            <h5 class="font-medium mb-2 dark:text-slate-300 text-slate-700">Final Year Project - Mohammedia</h5>
+                            <p class="dark:text-slate-400 text-slate-600">Designed and developed a Maintenance Management System (GMAO) to optimize industrial maintenance tracking.</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+                        <div class="ml-4">
+                            <span class="text-sm font-semibold text-sky-400">Apr 2024 - May 2024</span>
+                            <h4 class="text-xl font-semibold my-1">Web Developer Intern</h4>
+                            <h5 class="font-medium mb-2 dark:text-slate-300 text-slate-700">Société MTIS - Mohammedia</h5>
+                            <p class="dark:text-slate-400 text-slate-600">Created an educational web application for the Mohammedia technical high school.</p>
+                        </div>
+                    </div>
+                    <!-- Timeline Item 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-connector"></div>
+                        <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+                        <div class="ml-4">
+                            <span class="text-sm font-semibold text-sky-400">Dec 2020 - Jun 2022</span>
+                            <h4 class="text-xl font-semibold my-1">Bookstore Sales & IT Support</h4>
+                            <h5 class="font-medium mb-2 dark:text-slate-300 text-slate-700">Société IBNOUKHALDOUNE - Bouarfa</h5>
+                            <p class="dark:text-slate-400 text-slate-600">Managed customer service, order processing, and provided IT equipment maintenance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== 5. Projects Section ======== -->
+        <section id="projects" class="py-20">
+            <h2 class="section-title" data-aos="fade-up">Projects</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">A selection of my work</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="glass-card rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://placehold.co/600x400/1e293b/38bdf8?text=E-commerce+Site" alt="E-commerce Site Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Full-Stack E-commerce Site</h4>
+                        <p class="dark:text-slate-400 text-slate-600 mb-4">
+                            A complete e-commerce platform for robotics and automation parts, built from scratch during my internship at DEARS.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="pill-badge">Full-Stack</span>
+                            <span class="pill-badge">E-commerce</span>
+                            <span class="pill-badge">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="glass-card rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://placehold.co/600x400/1e293b/38bdf8?text=GMAO+System" alt="GMAO System Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Maintenance Management System (GMAO)</h4>
+                        <p class="dark:text-slate-400 text-slate-600 mb-4">
+                            My final year project (PFE) to design and develop a web app for tracking and managing industrial maintenance interventions.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="pill-badge">Full-Stack</span>
+                            <span class="pill-badge">Java</span>
+                            <span class="pill-badge">MySQL</span>
+                            <span class="pill-badge">UML</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="glass-card rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://placehold.co/600x400/1e293b/38bdf8?text=Educational+App" alt="Educational App Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-semibold mb-2">Educational Web App</h4>
+                        <p class="dark:text-slate-400 text-slate-600 mb-4">
+                            An application built for the Mohammedia technical high school to provide educational resources and services to students.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="pill-badge">Web App</span>
+                            <span class="pill-badge">PHP</span>
+                            <span class="pill-badge">JavaScript</span>
+                            <span class="pill-badge">Education</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== 6. Education Section ======== -->
+        <section id="education" class="py-20">
+            <h2 class="section-title" data-aos="fade-up">Education</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">My academic background</p>
+            
+            <div class="max-w-3xl mx-auto grid md:grid-cols-2 gap-8">
+                <!-- Education Card 1 -->
+                <div class="glass-card p-6 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                    <span class="text-sm font-semibold text-sky-400">2024 - 2025</span>
+                    <h4 class="text-xl font-semibold my-1">Licence 3 - Web & Mobile Development</h4>
+                    <h5 class="font-medium mb-2 dark:text-slate-300 text-slate-700">ENSET Mohammedia</h5>
+                    <p class="dark:text-slate-400 text-slate-600 text-sm">
+                        Focused on CMS, multimedia integration, modern app development (HTML, CSS, JS, PHP, Node.js), and SEO.
+                    </p>
+                </div>
+                <!-- Education Card 2 -->
+                <div class="glass-card p-6 rounded-xl" data-aos="fade-up" data-aos-delay="300">
+                    <span class="text-sm font-semibold text-sky-400">2022 - 2024</span>
+                    <h4 class="text-xl font-semibold my-1">BTS - IT Development</h4>
+                    <h5 class="font-medium mb-2 dark:text-slate-300 text-slate-700">IGIC SUP Mohammedia</h5>
+                    <p class="dark:text-slate-400 text-slate-600 text-sm">
+                        Focused on OOP (Java/UML), network installation, mobile systems, and dynamic website programming.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== 7. Contact Section ======== -->
+        <section id="contact" class="py-20">
+            <h2 class="section-title" data-aos="fade-up">Get in Touch</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Let's build something great together</p>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div data-aos="fade-right" data-aos-delay="200">
+                    <p class="dark:text-slate-400 text-slate-600 mb-8">
+                        I'm currently open to new opportunities and collaborations. Whether you have a project in mind or just want to connect, feel free to reach out.
+                    </p>
+                    <div class="space-y-4">
+                        <a href="mailto:aminebenabbas63@gmail.com" class="flex items-center group">
+                            <div class="glass-card p-3 rounded-full mr-4 group-hover:bg-sky-500/20 transition-all">
+                                <i data-lucide="mail" class="w-6 h-6 text-sky-400"></i>
+                            </div>
+                            <div>
+                                <span class="text-sm dark:text-slate-400 text-slate-600">Email</span>
+                                <p class="font-semibold">aminebenabbas63@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="tel:+212659127313" class="flex items-center group">
+                            <div class="glass-card p-3 rounded-full mr-4 group-hover:bg-sky-500/20 transition-all">
+                                <i data-lucide="phone" class="w-6 h-6 text-sky-400"></i>
+                            </div>
+                            <div>
+                                <span class="text-sm dark:text-slate-400 text-slate-600">Phone</span>
+                                <p class="font-semibold">+212 659127313</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center">
+                            <div class="glass-card p-3 rounded-full mr-4">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-sky-400"></i>
+                            </div>
+                            <div>
+                                <span class="text-sm dark:text-slate-400 text-slate-600">Location</span>
+                                <p class="font-semibold">Mohammedia, Morocco</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 mt-8">
+                        <!-- Add actual links when available -->
+                        <a href="https://www.linkedin.com/in/benabbas-amine-938092260/" target="_blank" class="glass-card p-3 rounded-full hover:text-sky-400 transition-all" aria-label="LinkedIn Profile">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </a>
+                        <a href="https://github.com/BENABBAS6" target="_blank" class="glass-card p-3 rounded-full hover:text-sky-400 transition-all" aria-label="GitHub Profile">
+                            <i data-lucide="github" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                    <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+                </div>
+                
+                <!-- Contact Form (UI Only) -->
+                <form id="contact-form" class="space-y-6" data-aos="fade-left" data-aos-delay="200">
+                    <div>
+                        <label for="name" class="block text-sm font-medium mb-2">Your Name</label>
+                        <input type="text" id="name" name="name" required class="form-input">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium mb-2">Your Email</label>
+                        <input type="email" id="email" name="email" required class="form-input">
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                        <input type="text" id="subject" name="subject" required class="form-input">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" required class="form-input"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-full">Send Message</button>
+                    <p id="form-status" class="text-center text-sm mt-4"></p>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ======== Footer ======== -->
+    <footer class="border-t dark:border-slate-800 border-slate-200 mt-20">
+        <div class="container mx-auto max-w-7xl px-6 py-8 text-center">
+            <p class="dark:text-slate-400 text-slate-600">
+                Designed & Built by Amine Benabbas
+            </p>
+        </div>
+    </footer>
+
+    <!-- ======== JavaScript ======== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 700,
+            once: true,
+            offset: 50,
+        });
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+        
+        // Custom Tag Pill Styles
+        // Since Tailwind doesn't know about 'pill-badge' at runtime, 
+        // we apply the classes directly or define them in the <style> tag.
+        // For simplicity, I'll add the styles here via JS on load.
+        document.addEventListener('DOMContentLoaded', () => {
+            const pills = document.querySelectorAll('.pill-badge');
+            pills.forEach(pill => {
+                pill.classList.add(
+                    'inline-block', 'px-3', 'py-1', 'rounded-full', 'text-xs', 'font-medium',
+                    'dark:bg-sky-900', 'dark:text-sky-300',
+                    'bg-sky-100', 'text-sky-800'
+                );
+            });
+        });
+
+        // ======== Theme Toggler ========
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlElement = document.documentElement;
+
+        // On page load, check local storage
+        if (localStorage.getItem('theme') === 'light') {
+            htmlElement.classList.remove('dark');
+        } else {
+            htmlElement.classList.add('dark');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // ======== Mobile Menu ========
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close menu when a link is clicked
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // ======== Contact Form (Mock) ========
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formStatus.textContent = 'Thank you for your message! (This is a demo)';
+            formStatus.classList.add('dark:text-green-400', 'text-green-600');
+            contactForm.reset();
+            setTimeout(() => {
+                formStatus.textContent = '';
+                formStatus.classList.remove('dark:text-green-400', 'text-green-600');
+            }, 5000);
+        });
+
+
+    </script>
+</body>
+</html>
